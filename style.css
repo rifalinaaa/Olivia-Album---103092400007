@@ -1,0 +1,349 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFDCDC;
+    color: #D8A2A2;
+}
+
+/* Menengahkan form secara horizontal dan vertikal */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Kotak login */
+.login-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h2 {
+    margin: 0 0 5px;
+    font-size: 22px;
+    color: #D8A2A2;
+}
+
+.subtitle {
+    margin: 0 0 16px;
+    font-size: 12px;
+    color: #D8A2A2;
+}
+
+/* Label dan input */
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #FFDCDC;
+    border-radius: 4px;
+    font-size: 12px;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* Warna input berubah saat diklik */
+.form-group input:focus {
+    background-color: #FFDCDC;
+    border-color: #FFDCDC;
+    box-shadow: 0 0 0 2px rgba(38, 132, 216, 0.12);
+}
+
+/* Tombol Masuk */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #D8A2A2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* Warna tombol berubah ketika mouse diarahkan */
+button:hover {
+    background-color: #FF95A5;
+    color: white;
+}
+
+/* Halaman index.html */
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.home-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.home-card h1 {
+    margin-top: 0;
+    color: #F29191;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: #F29191;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.back-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+    height: 55px;
+    background-color: #E2B4BD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+
+    /* Navbar tetap di atas ketika di-scroll */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo di sebelah kiri */
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Menu di sebelah kanan */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.nav-menu a:hover {
+    background-color: #D8A2A2;
+    color: #152b43;
+}
+
+
+.home-section {
+    background-color: #f3f6fc;
+    padding: 13px 14px 5px;
+}
+
+/* Gambar background dan teks di tengah */
+.hero {
+    min-height: 380px;
+    background-image:
+        linear-gradient(
+            rgba(5, 20, 37, 0.78),
+            rgba(5, 20, 37, 0.78)
+        ),
+        url("youseem.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 7px;
+    padding: 20px;
+}
+
+/* Tulisan utama */
+.hero h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Kata Performa dibuat berbeda */
+.hero h1 span {
+    color: #F29191;
+    font-size: 32px;
+}
+
+.content-section {
+    min-height: 250px;
+    padding: 50px 30px;
+    text-align: center;
+    scroll-margin-top: 65px;
+}
+
+.content-section h2 {
+    color: #152b43;
+}
+
+.content-section p {
+    color: #526579;
+}
+
+#home {
+    scroll-margin-top: 55px;
+}
+
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0 12px;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .nav-menu {
+        gap: 0;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+        padding: 8px 6px;
+    }
+
+    .hero {
+        min-height: 180px;
+    }
+
+    .hero h1 {
+        font-size: 18px;
+    }
+
+    .hero h1 span {
+        font-size: 24px;
+    }
+}
+
+.collections-section {
+    background-color: #f3f6fc;
+    padding: 15px 14px 20px;
+    scroll-margin-top: 55px;
+}
+
+.collections-section h2 {
+    font-size: 20px;
+    color: #152b43;
+    margin: 0 0 15px;
+}
+
+.collections-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Kartu produk */
+.product-card {
+    min-width: 0;
+    text-align: center;
+}
+
+/* Ukuran semua gambar dibuat sama */
+.product-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Nama produk di bawah gambar */
+.product-card p {
+    margin: 8px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #152b43;
+}
+
+/* Section About */
+#about {
+    background-color: #f3f6fc;
+    padding: 20px 14px;
+}
+
+#about h2 {
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+#about p {
+    font-size: 13px;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 767px) {
+    .collections-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 12px;
+    }
+
+    .product-card img {
+        height: 120px;
+    }
+
+    .collections-section h2 {
+        font-size: 18px;
+    }
+
+    .product-card p {
+        font-size: 12px;
+    }
+}
